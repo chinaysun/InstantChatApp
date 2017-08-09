@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginController: UIViewController {
 
@@ -22,7 +23,7 @@ class LoginController: UIViewController {
         
     }()
     
-    let loginRegisterButton: UIButton =
+    lazy var loginRegisterButton: UIButton =
     {
         let button = UIButton(type: UIButtonType.system)
         button.backgroundColor = UIColor(r: 80, g: 101, b: 161)
@@ -30,9 +31,57 @@ class LoginController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.white, for: UIControlState.normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        button.addTarget(self, action: #selector(handleRegister), for: UIControlEvents.touchUpInside)
+        
         return button
         
     }()
+    
+    
+    func handleRegister()
+    {
+        
+        guard let email = emailTextField.text,let password = passwordTextField.text, let name = nameTextField.text else {
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password, completion: {
+        
+            (user:User?,error) in
+            
+            if error != nil
+            {
+               print(error)
+               return
+            }
+            
+            
+            guard let userID = user?.uid else
+            {
+                return
+            }
+            
+            //successfully authenticated user
+            let ref = Database.database().reference(fromURL: "https://instantchat-7e681.firebaseio.com/")
+            let usersReference = ref.child("users").child(userID)
+            let values = ["name":name,"email":email]
+            usersReference.updateChildValues(values, withCompletionBlock: {
+            
+            (err,ref) in
+                
+                if err != nil
+                {
+                    print(err)
+                    return
+                }
+            
+                print("Saved user successfully in to Firebase db")
+            
+            })
+        
+        })
+    }
     
     let nameTextField:UITextField = {
        

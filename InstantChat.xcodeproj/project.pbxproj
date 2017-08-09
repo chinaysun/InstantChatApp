@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34692283F9D0768801DE4EAE /* Pods_InstantChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE68B588AEA945D9E3FFD5FB /* Pods_InstantChat.framework */; };
 		54199F4B1F3B02A6003EE021 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54199F4A1F3B02A6003EE021 /* LoginController.swift */; };
+		54199F4D1F3B38C7003EE021 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54199F4C1F3B38C7003EE021 /* GoogleService-Info.plist */; };
 		544BC51F1F3AAB040030E4D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BC51E1F3AAB040030E4D1 /* AppDelegate.swift */; };
 		544BC5211F3AAB040030E4D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BC5201F3AAB040030E4D1 /* ViewController.swift */; };
 		544BC5241F3AAB040030E4D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 544BC5221F3AAB040030E4D1 /* Main.storyboard */; };
@@ -16,7 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		005B8A18945E7E670C75A308 /* Pods-InstantChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstantChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstantChat/Pods-InstantChat.release.xcconfig"; sourceTree = "<group>"; };
 		54199F4A1F3B02A6003EE021 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		54199F4C1F3B38C7003EE021 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		544BC51B1F3AAB040030E4D1 /* InstantChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstantChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		544BC51E1F3AAB040030E4D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		544BC5201F3AAB040030E4D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		544BC5251F3AAB040030E4D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		544BC5281F3AAB040030E4D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		544BC52A1F3AAB040030E4D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FCD90E14DFC2C69B53771E1 /* Pods-InstantChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstantChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstantChat/Pods-InstantChat.debug.xcconfig"; sourceTree = "<group>"; };
+		AE68B588AEA945D9E3FFD5FB /* Pods_InstantChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstantChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34692283F9D0768801DE4EAE /* Pods_InstantChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +58,8 @@
 			children = (
 				544BC51D1F3AAB040030E4D1 /* InstantChat */,
 				544BC51C1F3AAB040030E4D1 /* Products */,
+				7C49328BDF8BAE6D280EA7AD /* Pods */,
+				D642A9212D99D5D81B16E950 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,8 +88,26 @@
 				544BC5251F3AAB040030E4D1 /* Assets.xcassets */,
 				544BC5271F3AAB040030E4D1 /* LaunchScreen.storyboard */,
 				544BC52A1F3AAB040030E4D1 /* Info.plist */,
+				54199F4C1F3B38C7003EE021 /* GoogleService-Info.plist */,
 			);
 			name = "Supporting File";
+			sourceTree = "<group>";
+		};
+		7C49328BDF8BAE6D280EA7AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FCD90E14DFC2C69B53771E1 /* Pods-InstantChat.debug.xcconfig */,
+				005B8A18945E7E670C75A308 /* Pods-InstantChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D642A9212D99D5D81B16E950 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE68B588AEA945D9E3FFD5FB /* Pods_InstantChat.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,9 +117,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 544BC52D1F3AAB040030E4D1 /* Build configuration list for PBXNativeTarget "InstantChat" */;
 			buildPhases = (
+				E0341551E0FDF35F9A80304F /* [CP] Check Pods Manifest.lock */,
 				544BC5171F3AAB040030E4D1 /* Sources */,
 				544BC5181F3AAB040030E4D1 /* Frameworks */,
 				544BC5191F3AAB040030E4D1 /* Resources */,
+				7C456F5E2812B00FCF2E91C0 /* [CP] Embed Pods Frameworks */,
+				C535E9E6BCBB2C64794DAC65 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,12 +174,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				544BC5291F3AAB040030E4D1 /* LaunchScreen.storyboard in Resources */,
+				54199F4D1F3B38C7003EE021 /* GoogleService-Info.plist in Resources */,
 				544BC5261F3AAB040030E4D1 /* Assets.xcassets in Resources */,
 				544BC5241F3AAB040030E4D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7C456F5E2812B00FCF2E91C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstantChat/Pods-InstantChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C535E9E6BCBB2C64794DAC65 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstantChat/Pods-InstantChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0341551E0FDF35F9A80304F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		544BC5171F3AAB040030E4D1 /* Sources */ = {
@@ -281,6 +360,7 @@
 		};
 		544BC52E1F3AAB040030E4D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FCD90E14DFC2C69B53771E1 /* Pods-InstantChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 88JGBRLZ4C;
@@ -294,6 +374,7 @@
 		};
 		544BC52F1F3AAB040030E4D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 005B8A18945E7E670C75A308 /* Pods-InstantChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 88JGBRLZ4C;
