@@ -54,14 +54,22 @@
 		544BC51D1F3AAB040030E4D1 /* InstantChat */ = {
 			isa = PBXGroup;
 			children = (
-				544BC51E1F3AAB040030E4D1 /* AppDelegate.swift */,
+				544BC5301F3AB0780030E4D1 /* Supporting File */,
 				544BC5201F3AAB040030E4D1 /* ViewController.swift */,
 				544BC5221F3AAB040030E4D1 /* Main.storyboard */,
+			);
+			path = InstantChat;
+			sourceTree = "<group>";
+		};
+		544BC5301F3AB0780030E4D1 /* Supporting File */ = {
+			isa = PBXGroup;
+			children = (
+				544BC51E1F3AAB040030E4D1 /* AppDelegate.swift */,
 				544BC5251F3AAB040030E4D1 /* Assets.xcassets */,
 				544BC5271F3AAB040030E4D1 /* LaunchScreen.storyboard */,
 				544BC52A1F3AAB040030E4D1 /* Info.plist */,
 			);
-			path = InstantChat;
+			name = "Supporting File";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
