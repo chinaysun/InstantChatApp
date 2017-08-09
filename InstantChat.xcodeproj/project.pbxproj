@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54199F4B1F3B02A6003EE021 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54199F4A1F3B02A6003EE021 /* LoginController.swift */; };
 		544BC51F1F3AAB040030E4D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BC51E1F3AAB040030E4D1 /* AppDelegate.swift */; };
 		544BC5211F3AAB040030E4D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544BC5201F3AAB040030E4D1 /* ViewController.swift */; };
 		544BC5241F3AAB040030E4D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 544BC5221F3AAB040030E4D1 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54199F4A1F3B02A6003EE021 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		544BC51B1F3AAB040030E4D1 /* InstantChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstantChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		544BC51E1F3AAB040030E4D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		544BC5201F3AAB040030E4D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54199F491F3B027E003EE021 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				54199F4A1F3B02A6003EE021 /* LoginController.swift */,
+				544BC5201F3AAB040030E4D1 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		544BC5121F3AAB040030E4D1 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +65,8 @@
 		544BC51D1F3AAB040030E4D1 /* InstantChat */ = {
 			isa = PBXGroup;
 			children = (
+				54199F491F3B027E003EE021 /* Controller */,
 				544BC5301F3AB0780030E4D1 /* Supporting File */,
-				544BC5201F3AAB040030E4D1 /* ViewController.swift */,
 				544BC5221F3AAB040030E4D1 /* Main.storyboard */,
 			);
 			path = InstantChat;
@@ -146,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				544BC5211F3AAB040030E4D1 /* ViewController.swift in Sources */,
+				54199F4B1F3B02A6003EE021 /* LoginController.swift in Sources */,
 				544BC51F1F3AAB040030E4D1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +324,7 @@
 				544BC52F1F3AAB040030E4D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
