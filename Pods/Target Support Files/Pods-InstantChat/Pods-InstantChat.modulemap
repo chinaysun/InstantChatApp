@@ -1,0 +1,6 @@
+framework module Pods_InstantChat {
+  umbrella header "Pods-InstantChat-umbrella.h"
+
+  export *
+  module * { export * }
+}
