@@ -76,49 +76,6 @@ class LoginController: UIViewController {
     }
     
     
-    func handleRegister()
-    {
-        
-        guard let email = emailTextField.text,let password = passwordTextField.text, let name = nameTextField.text else {
-            return
-        }
-        
-        Auth.auth().createUser(withEmail: email, password: password, completion: {
-        
-            (user,error) in
-            
-            if error != nil
-            {
-               print(error)
-               return
-            }
-            
-            
-            guard let userID = user?.uid else
-            {
-                return
-            }
-            
-            //successfully authenticated user
-            let ref = Database.database().reference(fromURL: "https://instantchat-7e681.firebaseio.com/")
-            let usersReference = ref.child("users").child(userID)
-            let values = ["name":name,"email":email]
-            usersReference.updateChildValues(values, withCompletionBlock: {
-            
-            (err,ref) in
-                
-                if err != nil
-                {
-                    print(err)
-                    return
-                }
-            
-                self.dismiss(animated: true, completion: nil)
-            
-            })
-        
-        })
-    }
     
     let nameTextField:UITextField = {
        
@@ -170,17 +127,11 @@ class LoginController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         
-        imageView.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(handleSelectProfileImageView)))
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSelectProfileImageView)))
         imageView.isUserInteractionEnabled = true
         
         return imageView
     }()
-    
-    
-    func handleSelectProfileImageView()
-    {
-        
-    }
     
     
     
