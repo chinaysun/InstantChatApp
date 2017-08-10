@@ -163,13 +163,25 @@ class LoginController: UIViewController {
     }()
     
     
-    let profileImageView:UIImageView = {
+    lazy var profileImageView:UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "logo")
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        imageView.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(handleSelectProfileImageView)))
+        imageView.isUserInteractionEnabled = true
+        
         return imageView
     }()
+    
+    
+    func handleSelectProfileImageView()
+    {
+        
+    }
+    
     
     
     lazy var loginRegisterSegmentedControl:UISegmentedControl = {
