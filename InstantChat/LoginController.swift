@@ -85,7 +85,7 @@ class LoginController: UIViewController {
         
         Auth.auth().createUser(withEmail: email, password: password, completion: {
         
-            (user:User?,error) in
+            (user,error) in
             
             if error != nil
             {
