@@ -12,6 +12,9 @@ import Firebase
 
 extension LoginController:UIImagePickerControllerDelegate,UINavigationControllerDelegate
 {
+    
+    
+    
     func handleRegister()
     {
         
@@ -40,8 +43,9 @@ extension LoginController:UIImagePickerControllerDelegate,UINavigationController
             let imageName = NSUUID().uuidString
             
             // must have a child path
-            let storageRef = Storage.storage().reference().child("profile_image").child("\(imageName).png")
-            if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!)
+            let storageRef = Storage.storage().reference().child("profile_image").child("\(imageName).jpg")
+            
+            if let profileImage = self.profileImageView.image, let uploadData = UIImageJPEGRepresentation(profileImage, 0.1)
             {
                 storageRef.putData(uploadData, metadata: nil, completion: {
                 
@@ -87,6 +91,14 @@ extension LoginController:UIImagePickerControllerDelegate,UINavigationController
                 print(err)
                 return
             }
+            
+            
+            let user = User()
+            
+            //may crash if the key do not match
+            user.setValuesForKeys(values)
+            
+            self.messagesController?.setupNavBarWithUser(user: user)
             
             self.dismiss(animated: true, completion: nil)
             
