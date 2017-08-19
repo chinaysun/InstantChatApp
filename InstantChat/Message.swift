@@ -15,5 +15,7 @@ class Message: NSObject {
     var timestamp:NSNumber?
     var toId:String?
     
+    var test = [Int]()
     
+  
 }
