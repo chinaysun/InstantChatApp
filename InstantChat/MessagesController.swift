@@ -66,10 +66,10 @@ class MessagesController: UITableViewController {
                 let message = Message()
                 message.setValuesForKeys(dictionary)
                     
-                if let toId = message.toId
+                if let chatPartnerId = message.chatPartnerId()
                 {
                         
-                    self.messagesDictionary[toId] = message
+                    self.messagesDictionary[chatPartnerId] = message
                     self.messages = Array(self.messagesDictionary.values)
                     self.messages.sort(by: {
                             
