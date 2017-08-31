@@ -80,10 +80,14 @@ class MessagesController: UITableViewController {
                             
                     })
                 }
+                
+                
+                //countine to cancel the timer until the last
+                self.timer?.invalidate()
+                self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.handleReloadTable), userInfo: nil, repeats: false)
+                
                     
-                    
-                //this will crash because of background thread, so lets user dispatch_async to fix
-                DispatchQueue.main.async(execute: { self.tableView.reloadData() })
+           
             }
                 
 
@@ -95,6 +99,13 @@ class MessagesController: UITableViewController {
         }, withCancel: nil)
     }
     
+    var timer:Timer?
+    
+    func handleReloadTable()
+    {
+        //this will crash because of background thread, so lets user dispatch_async to fix
+        DispatchQueue.main.async(execute: { self.tableView.reloadData() })
+    }
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
