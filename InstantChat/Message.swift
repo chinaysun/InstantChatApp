@@ -16,6 +16,9 @@ class Message: NSObject {
     var timestamp:NSNumber?
     var toId:String?
     
+    
+    var imageUrl:String?
+    
    func chatPartnerId() -> String? {
     
      return fromId == Auth.auth().currentUser?.uid ? toId : fromId
