@@ -19,7 +19,14 @@ class UserCell:UITableViewCell
 
             setupNameAndProfileImage()
             
-            self.detailTextLabel?.text = message?.text
+            if message?.imageUrl != nil
+            {
+                self.detailTextLabel?.text = "Send an image..."
+                
+            }else
+            {
+                self.detailTextLabel?.text = message?.text
+            }
             
             if let seconds = message?.timestamp?.doubleValue
             {
