@@ -442,13 +442,14 @@ class ChatLogController:UICollectionViewController,UITextFieldDelegate,UICollect
         cell.chatLogController = self
         
         let message = messages[indexPath.row]
+        
+        cell.message = message
+        
         cell.textView.text = message.text
         
         
         setupCell(cell: cell, message: message)
 
-        
-        
         
         if let text = message.text {
              cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: text).width + 32
@@ -458,11 +459,11 @@ class ChatLogController:UICollectionViewController,UITextFieldDelegate,UICollect
             //fall in here if its an image message
             
             cell.bubbleWidthAnchor?.constant = 200
-             cell.textView.isHidden = true 
-            
-            
+            cell.textView.isHidden = true
+        
         }
        
+        cell.playButton.isHidden = message.videoUrl == nil
         
         return cell
     }
