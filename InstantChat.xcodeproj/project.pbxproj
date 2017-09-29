@@ -23,6 +23,7 @@
 		54EAF8CB1F3D9D8500C1AB99 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8CA1F3D9D8500C1AB99 /* Extension.swift */; };
 		54EAF8CD1F412BE100C1AB99 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8CC1F412BE100C1AB99 /* ChatLogController.swift */; };
 		54EAF8CF1F43339C00C1AB99 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAF8CE1F43339C00C1AB99 /* Message.swift */; };
+		8C7A47491F7E07FF0017025F /* ChatInputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7A47481F7E07FF0017025F /* ChatInputContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		54EAF8CC1F412BE100C1AB99 /* ChatLogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 		54EAF8CE1F43339C00C1AB99 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		5FCD90E14DFC2C69B53771E1 /* Pods-InstantChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstantChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstantChat/Pods-InstantChat.debug.xcconfig"; sourceTree = "<group>"; };
+		8C7A47481F7E07FF0017025F /* ChatInputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputContainerView.swift; sourceTree = "<group>"; };
 		AE68B588AEA945D9E3FFD5FB /* Pods_InstantChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstantChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 			children = (
 				547453DB1F48388200C3365E /* UserCell.swift */,
 				54CB7AD51F52AD77003F6545 /* ChatMessageCell.swift */,
+				8C7A47481F7E07FF0017025F /* ChatInputContainerView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54EAF8CD1F412BE100C1AB99 /* ChatLogController.swift in Sources */,
+				8C7A47491F7E07FF0017025F /* ChatInputContainerView.swift in Sources */,
 				544BC5211F3AAB040030E4D1 /* MessagesController.swift in Sources */,
 				54199F4B1F3B02A6003EE021 /* LoginController.swift in Sources */,
 				54EAF8CF1F43339C00C1AB99 /* Message.swift in Sources */,
